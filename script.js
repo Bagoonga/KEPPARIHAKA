@@ -3,8 +3,8 @@ const kepparit = [
   { nimi: "Tulikärpänen", rotu: "lipizzanhevonen", sukupuoli: "ruuna", ika: 6, kuva: "kuvat/tulikarpanen.jpg" },
   { nimi: "Esteri", rotu: "suomenhevonen", sukupuoli: "tamma", ika: 5, kuva: "kuvat/esteri.jpg" },
   { nimi: "Luumu", rotu: "islanninhevonen", sukupuoli: "tamma", ika: 11, kuva: "kuvat/luumu.jpg" },
-  { nimi: "Batman", rotu: "shetlanninponi", sukupuoli: "ori", ika: 2, kuva: "kuvat/batman.jpg" },
-  { nimi: "Keijo", rotu: "connemaranponi", sukupuoli: "ori", ika: 8, kuva: "kuvat/keijo.jpg" },
+  { nimi: "Batman", rotu: "islanninhevonen", sukupuoli: "ori", ika: 2, kuva: "kuvat/batman.jpg" },
+  { nimi: "Keijo", rotu: "islanninhevonen", sukupuoli: "ori", ika: 8, kuva: "kuvat/keijo.jpg" },
   { nimi: "Ròse", rotu: "quarterhevonen", sukupuoli: "tamma", ika: 4, kuva: "kuvat/rose.jpg" },
   { nimi: "Korppi", rotu: "friisiläishevonen", sukupuoli: "ori", ika: 7, kuva: "kuvat/korppi.jpg" },
   { nimi: "Sylvi", rotu: "welshponi", sukupuoli: "tamma", ika: 7, kuva: "kuvat/sylvi.jpg" }
