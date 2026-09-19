@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#c9f4df">
+  <title>KEPPARIHAKA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <img class="logo" src="kuvat/logo.png" alt="KEPPARIHAKA-logo">
+    <p>Miisan kepparitalli</p>
+  </header>
+
+  <main>
+    <section class="talli" aria-labelledby="talli-otsikko">
+      <h1 id="talli-otsikko">Tallin kepparit</h1>
+      <p class="ohje">Paina kepparia, niin näet sen tiedot.</p>
+      <div id="kepparit" class="keppari-grid"></div>
+    </section>
+
+    <section id="tiedot" class="tiedot piilossa" aria-live="polite">
+      <button id="sulje" class="sulje" type="button" aria-label="Sulje tiedot">×</button>
+      <img id="tieto-kuva" src="" alt="">
+      <div class="tieto-teksti">
+        <p class="pieni-otsikko">KEPPARI</p>
+        <h2 id="tieto-nimi"></h2>
+        <p><strong>Sukupuoli:</strong> <span id="tieto-sukupuoli"></span></p>
+        <p><strong>Ikä:</strong> <span id="tieto-ika"></span></p>
+      </div>
+    </section>
+  </main>
+
+  <footer><p>KEPPARIHAKA ♡</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
