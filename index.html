@@ -5,35 +5,121 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#c9f4df">
   <title>KEPPARIHAKA</title>
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
   <header class="hero">
+    <button id="valikko-nappi" class="valikko-nappi" type="button" aria-label="Avaa valikko" aria-expanded="false" aria-controls="paavalikko">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav id="paavalikko" class="paavalikko piilossa" aria-label="Päävalikko">
+      <button type="button" data-nakyma="etusivu">🏠 Etusivu</button>
+      <button type="button" data-nakyma="kalenteri">📅 Kalenteri</button>
+      <button type="button" data-nakyma="ruokinta">🥕 Ruokinta</button>
+      <button type="button" data-nakyma="varusteet">🧰 Varusteet</button>
+    </nav>
+
     <img class="logo" src="kuvat/logo.png" alt="KEPPARIHAKA-logo">
     <p>Miisan kepparitalli</p>
   </header>
 
   <main>
-    <section class="talli" aria-labelledby="talli-otsikko">
-      <h1 id="talli-otsikko">Tallin kepparit</h1>
-      <p class="ohje">Paina kepparia, niin näet sen tiedot.</p>
-      <div id="kepparit" class="keppari-grid"></div>
+    <section id="etusivu" class="nakyma">
+      <section class="talli" aria-labelledby="talli-otsikko">
+        <h1 id="talli-otsikko">Tallin kepparit</h1>
+        <p class="ohje">Paina kepparia, niin näet sen tiedot.</p>
+        <div id="kepparit" class="keppari-grid"></div>
+      </section>
+
+      <section id="tiedot" class="tiedot piilossa" aria-live="polite">
+        <button id="sulje" class="sulje" type="button" aria-label="Sulje tiedot">×</button>
+        <img id="tieto-kuva" src="" alt="">
+        <div class="tieto-teksti">
+          <p class="pieni-otsikko">KEPPARI</p>
+          <h2 id="tieto-nimi"></h2>
+          <p><strong>Rotu:</strong> <span id="tieto-rotu"></span></p>
+          <p><strong>Sukupuoli:</strong> <span id="tieto-sukupuoli"></span></p>
+          <p><strong>Ikä:</strong> <span id="tieto-ika"></span></p>
+        </div>
+      </section>
     </section>
 
-    <section id="tiedot" class="tiedot piilossa" aria-live="polite">
-      <button id="sulje" class="sulje" type="button" aria-label="Sulje tiedot">×</button>
-      <img id="tieto-kuva" src="" alt="">
-      <div class="tieto-teksti">
-        <p class="pieni-otsikko">KEPPARI</p>
-        <h2 id="tieto-nimi"></h2>
-        <p><strong>Rotu:</strong> <span id="tieto-rotu"></span></p>
-        <p><strong>Sukupuoli:</strong> <span id="tieto-sukupuoli"></span></p>
-        <p><strong>Ikä:</strong> <span id="tieto-ika"></span></p>
+    <section id="kalenteri" class="nakyma piilossa">
+      <div class="sisalto-kortti">
+        <p class="pieni-otsikko">VIIKKOSUUNNITELMA</p>
+        <h1>Kalenteri</h1>
+        <p class="ohje vasen">Tämä sama suunnitelma toistuu joka viikko.</p>
+
+        <div class="viikko">
+          <article><strong>Maanantai</strong><span>Tulikärpänen – esteharjoitus</span></article>
+          <article><strong>Tiistai</strong><span>Esteri – maastolenkki</span></article>
+          <article><strong>Keskiviikko</strong><span>Luumu – kouluratsastus</span></article>
+          <article><strong>Torstai</strong><span>Batman & Keijo – puomiharjoitus</span></article>
+          <article><strong>Perjantai</strong><span>Ròse – esterata</span></article>
+          <article><strong>Lauantai</strong><span>Korppi & Sylvi – vapaa harjoittelu</span></article>
+          <article><strong>Sunnuntai</strong><span>Kaikilla lepopäivä 💜</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ruokinta" class="nakyma piilossa">
+      <div class="sisalto-kortti">
+        <p class="pieni-otsikko">TALLIN RUOKINTA</p>
+        <h1>Ruokinta</h1>
+        <p class="ohje vasen">Ensimmäinen kokeilu – Miisa voi päättää oikeat ruoat myöhemmin.</p>
+
+        <div class="taulukko-kehys">
+          <table>
+            <thead>
+              <tr><th>Keppari</th><th>Aamu</th><th>Päivä</th><th>Ilta</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Tulikärpänen</td><td>Heinää</td><td>–</td><td>Heinää + porkkana</td></tr>
+              <tr><td>Esteri</td><td>Heinää</td><td>Omena</td><td>Heinää</td></tr>
+              <tr><td>Luumu</td><td>Heinää</td><td>–</td><td>Heinää</td></tr>
+              <tr><td>Batman</td><td>Heinää</td><td>Porkkana</td><td>Heinää</td></tr>
+              <tr><td>Keijo</td><td>Heinää</td><td>–</td><td>Heinää + omena</td></tr>
+              <tr><td>Ròse</td><td>Heinää</td><td>Porkkana</td><td>Heinää</td></tr>
+              <tr><td>Korppi</td><td>Heinää</td><td>–</td><td>Heinää</td></tr>
+              <tr><td>Sylvi</td><td>Heinää</td><td>Omena</td><td>Heinää</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="varusteet" class="nakyma piilossa">
+      <div class="sisalto-kortti">
+        <p class="pieni-otsikko">TALLIN TAVARAT</p>
+        <h1>Varusteet</h1>
+        <p class="ohje vasen">Yhteiset varusteet ja keppareiden omat varusteet voidaan erottaa näin.</p>
+
+        <div class="varuste-ruudukko">
+          <article class="varuste-kortti yhteiset">
+            <h2>⭐ Tallin yhteiset</h2>
+            <ul>
+              <li>Harjapakki</li>
+              <li>Esteraippa</li>
+              <li>Sininen loimi</li>
+              <li>Kuljetusriimu</li>
+            </ul>
+          </article>
+
+          <article class="varuste-kortti"><h2>Tulikärpänen</h2><ul><li>Omat suitset</li><li>Oma riimu</li><li>Yhteinen sininen loimi</li></ul></article>
+          <article class="varuste-kortti"><h2>Esteri</h2><ul><li>Omat suitset</li><li>Oma loimi</li><li>Yhteinen harjapakki</li></ul></article>
+          <article class="varuste-kortti"><h2>Luumu</h2><ul><li>Oma riimu</li><li>Yhteiset suitset</li></ul></article>
+          <article class="varuste-kortti"><h2>Batman</h2><ul><li>Yhteiset suitset</li><li>Yhteinen harjapakki</li></ul></article>
+          <article class="varuste-kortti"><h2>Keijo</h2><ul><li>Oma riimu</li><li>Yhteiset suitset</li></ul></article>
+          <article class="varuste-kortti"><h2>Ròse</h2><ul><li>Omat suitset</li><li>Oma riimu</li></ul></article>
+          <article class="varuste-kortti"><h2>Korppi</h2><ul><li>Omat suitset</li><li>Yhteinen esteraippa</li></ul></article>
+          <article class="varuste-kortti"><h2>Sylvi</h2><ul><li>Oma riimu</li><li>Yhteinen sininen loimi</li></ul></article>
+        </div>
       </div>
     </section>
   </main>
 
   <footer><p>KEPPARIHAKA ♡</p></footer>
-  <script src="script.js?v=2"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>
