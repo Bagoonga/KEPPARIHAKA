@@ -368,3 +368,58 @@ footer { text-align: center; padding: 42px 16px 30px; color: #887291; }
     height: 66px;
   }
 }
+
+
+/* Päiväkirjan tasainen pilvireuna */
+.paivakirja-kortti {
+  isolation: isolate;
+  overflow: visible;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.paivakirja-kortti::before {
+  content: "";
+  position: absolute;
+  inset: -18px;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at center, #f7efff 0 46%, #ead8ff 62%, #c8a4f0 76%, transparent 80%) top left / 36px 36px repeat-x,
+    radial-gradient(circle at center, #f7efff 0 46%, #ead8ff 62%, #c8a4f0 76%, transparent 80%) bottom left / 36px 36px repeat-x,
+    radial-gradient(circle at center, #f7efff 0 46%, #ead8ff 62%, #c8a4f0 76%, transparent 80%) left top / 36px 36px repeat-y,
+    radial-gradient(circle at center, #f7efff 0 46%, #ead8ff 62%, #c8a4f0 76%, transparent 80%) right top / 36px 36px repeat-y;
+  filter: drop-shadow(0 10px 18px rgba(111, 85, 126, .12));
+}
+
+.paivakirja-kortti::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  border: 4px solid white;
+  border-radius: 30px;
+  background: rgba(255,255,255,.94);
+  box-shadow: var(--varjo);
+}
+
+.paivakirja-kortti > .pieni-otsikko,
+.paivakirja-kortti > h1,
+.paivakirja-kortti > .ohje,
+.paivakirja-kortti > .paivakirja-merkinta {
+  position: relative;
+  z-index: 2;
+}
+
+.paivakirja-koriste {
+  z-index: 3;
+}
+
+@media (max-width: 620px) {
+  .paivakirja-kortti::before {
+    inset: -13px;
+    background-size: 28px 28px, 28px 28px, 28px 28px, 28px 28px;
+  }
+}
