@@ -260,3 +260,10 @@ footer { text-align: center; padding: 42px 16px 30px; color: #887291; }
 .kalenteri-taulukko td {
   line-height: 1.7;
 }
+
+
+/* Kalenterin viikonpäivät */
+.kalenteri-taulukko tbody td:first-child strong {
+  font-size: 1.22rem;
+  color: #203864;
+}
