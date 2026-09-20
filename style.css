@@ -291,63 +291,37 @@ footer { text-align: center; padding: 42px 16px 30px; color: #887291; }
   filter: drop-shadow(0 5px 8px rgba(99, 72, 117, .12));
 }
 
-.paivakirja-koriste svg {
+.paivakirja-koriste img {
   width: 100%;
   height: 100%;
-  overflow: visible;
+  object-fit: contain;
+  display: block;
 }
 
 .paivakirja-koriste-vasen {
-  top: 12px;
+  top: 8px;
   left: 18%;
-  transform: rotate(-8deg);
+  width: 82px;
+  height: 82px;
+  transform: rotate(-6deg);
 }
 
 .paivakirja-koriste-keski {
-  top: 12px;
+  top: 4px;
   left: 50%;
-  transform: translateX(-50%) rotate(4deg);
-  width: 82px;
+  width: 108px;
+  height: 86px;
+  transform: translateX(-50%) rotate(2deg);
 }
 
 .paivakirja-koriste-oikea {
-  top: 8px;
+  top: 5px;
   right: 18px;
-  transform: rotate(7deg);
-  width: 78px;
+  width: 88px;
+  height: 88px;
+  transform: rotate(5deg);
 }
 
-.koriste-viiva {
-  stroke: #6f557e;
-  stroke-width: 4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  fill: none;
-}
-
-.koriste-pallo {
-  stroke: #6f557e;
-  stroke-width: 3;
-}
-
-.koriste-lila,
-.koriste-lila-taytto {
-  fill: #d9c2f0;
-}
-
-.koriste-pinkki,
-.koriste-pinkki-taytto {
-  fill: #f7bfd8;
-}
-
-.koriste-minttu,
-.koriste-minttu-taytto {
-  fill: #bfe9d8;
-}
-
-.koriste-keltainen-taytto {
-  fill: #ffe7a8;
-}
 
 .paivakirja-merkinta {
   position: relative;
@@ -377,21 +351,20 @@ footer { text-align: center; padding: 42px 16px 30px; color: #887291; }
     padding-top: 70px;
   }
 
-  .paivakirja-koriste {
-    width: 58px;
-    height: 58px;
-  }
-
   .paivakirja-koriste-vasen {
-    left: 12px;
+    left: 10px;
+    width: 62px;
+    height: 62px;
   }
 
   .paivakirja-koriste-keski {
-    width: 64px;
+    width: 82px;
+    height: 66px;
   }
 
   .paivakirja-koriste-oikea {
     right: 8px;
-    width: 60px;
+    width: 66px;
+    height: 66px;
   }
 }
