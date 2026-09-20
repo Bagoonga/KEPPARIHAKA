@@ -401,7 +401,7 @@ footer { text-align: center; padding: 42px 16px 30px; color: #887291; }
   pointer-events: none;
   border: 4px solid white;
   border-radius: 30px;
-  background: rgba(255,255,255,.94);
+  background: #fff;
   box-shadow: var(--varjo);
 }
 
