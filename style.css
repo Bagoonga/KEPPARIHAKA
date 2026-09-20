@@ -265,7 +265,8 @@ footer { text-align: center; padding: 42px 16px 30px; color: #887291; }
 
 
 /* Kalenterin viikonpäivät */
-.kalenteri-taulukko tbody td:first-child strong {
+.kalenteri-taulukko tbody td:first-child strong,
+#ruokinta tbody td:first-child {
   font-family: "Fredoka", "Trebuchet MS", sans-serif;
   font-size: 1.26rem;
   font-weight: 800;
