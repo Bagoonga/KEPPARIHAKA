@@ -264,6 +264,9 @@ footer { text-align: center; padding: 42px 16px 30px; color: #887291; }
 
 /* Kalenterin viikonpäivät */
 .kalenteri-taulukko tbody td:first-child strong {
+  font-family: "Arial Rounded MT Bold", "Trebuchet MS", sans-serif;
   font-size: 1.22rem;
+  font-weight: 900;
+  letter-spacing: 0.01em;
   color: #203864;
 }
